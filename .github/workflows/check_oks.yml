@@ -1,0 +1,12 @@
+name: check_oks
+
+on:
+  push:
+    branches: [ "master" ]
+    
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: composer install
+      - run: 
