@@ -15,4 +15,9 @@ class Ohce
 
         return $reversed_text;
     }
+
+    public function goodBye(): string
+    {
+        return "Adios Pedro";
+    }
 }

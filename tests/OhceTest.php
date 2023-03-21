@@ -14,8 +14,20 @@ class OhceTest extends TestCase
     {
         $ohce = new Ohce();
 
-        $ohceRessult = $ohce->reverse("hola");
+        $ohce_ressult = $ohce->reverse("hola");
 
-        $this->assertEquals("aloh", $ohceRessult);
+        $this->assertEquals("aloh", $ohce_ressult);
+    }
+
+    /**
+     * @test
+     */
+    public function saysGoodBye(): void
+    {
+        $ohce = new Ohce("Pedro");
+
+        $goodbye_text = $ohce->goodBye();
+
+        $this->assertEquals("Adios Pedro", $goodbye_text);
     }
 }
