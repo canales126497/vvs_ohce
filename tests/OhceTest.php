@@ -28,7 +28,7 @@ class OhceTest extends TestCase
     {
         $day_mock = new Mockery();
         $day_mock = $day_mock->mock(DayMomentProvider::class);
-        $day_mock->allows()->getDayMoment()->andReturn(DayMomentProvider::morning);
+        $day_mock->allows()->getDayMoment()->andReturn(DayMomentProvider::MORNING);
         $ohce = new Ohce($day_mock);
 
         $ohce_result = $ohce->execute("ohce Pedro");
@@ -43,7 +43,7 @@ class OhceTest extends TestCase
     {
         $day_mock = new Mockery();
         $day_mock = $day_mock->mock(DayMomentProvider::class);
-        $day_mock->allows()->getDayMoment()->andReturn(DayMomentProvider::afternoon);
+        $day_mock->allows()->getDayMoment()->andReturn(DayMomentProvider::AFTERNOON);
         $ohce = new Ohce($day_mock);
 
         $ohce_result = $ohce->execute("ohce Pedro");
@@ -58,7 +58,7 @@ class OhceTest extends TestCase
     {
         $day_mock = new Mockery();
         $day_mock = $day_mock->mock(DayMomentProvider::class);
-        $day_mock->allows()->getDayMoment()->andReturn(DayMomentProvider::night);
+        $day_mock->allows()->getDayMoment()->andReturn(DayMomentProvider::NIGHT);
         $ohce = new Ohce($day_mock);
 
         $ohce_result = $ohce->execute("ohce Pedro");

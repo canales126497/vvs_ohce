@@ -18,13 +18,13 @@ class Ohce
         if (preg_match("/ohce/  ", $text_to_reverse) == 1) {
             $day_moment = $this->day->getDayMoment();
             $this->user_name = explode("ohce ", $text_to_reverse)[1];
-            if ($day_moment == DayMomentProvider::night) {
+            if ($day_moment == DayMomentProvider::NIGHT) {
                 return "Buenas noches " . $this->user_name;
             }
-            if ($day_moment == DayMomentProvider::morning) {
+            if ($day_moment == DayMomentProvider::MORNING) {
                 return "Buenos días " . $this->user_name;
             }
-            if ($day_moment == DayMomentProvider::afternoon) {
+            if ($day_moment == DayMomentProvider::AFTERNOON) {
                 return "Buenas tardes " . $this->user_name;
             }
 
